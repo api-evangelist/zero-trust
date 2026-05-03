@@ -1,0 +1,81 @@
+name: Zero Trust Vocabulary
+description: >-
+  Umbrella vocabulary for the Zero Trust topic, harmonizing terms across
+  NIST SP 800-207, CISA Zero Trust Maturity Model, DoD Zero Trust Reference
+  Architecture, NSA, NCSC, and the major vendor implementations
+  (Cloudflare, Zscaler, Netskope, Palo Alto, Microsoft, Google, Tailscale,
+  Twingate, SPIFFE/SPIRE, OPA).
+modified: '2026-05-03'
+terms:
+  - term: ZeroTrust
+    definition: A cybersecurity strategy that assumes no implicit trust based on network location and continuously verifies every access request.
+    related: [NeverTrustAlwaysVerify, AssumeBreach]
+  - term: ZTA
+    definition: Zero Trust Architecture - the architectural pattern formalized in NIST SP 800-207.
+    related: [ZeroTrust]
+  - term: ZTNA
+    definition: Zero Trust Network Access - the product category that brokers identity-aware access to private applications.
+    related: [ZeroTrust, SASE]
+  - term: SASE
+    definition: Secure Access Service Edge - the convergence of ZTNA, SWG, CASB, FWaaS, and SD-WAN.
+    related: [SSE, ZTNA]
+  - term: SSE
+    definition: Security Service Edge - the security half of SASE (ZTNA, SWG, CASB).
+    related: [SASE]
+  - term: AccessDecision
+    definition: The verdict (allow, deny, step_up, isolate, monitor) returned by a PDP for a single access request.
+    related: [PolicyDecisionPoint, Obligation]
+  - term: PolicyDecisionPoint
+    definition: The component (PDP) that evaluates a request against policy and returns a decision.
+    related: [PolicyEnforcementPoint, PolicyAdministrationPoint]
+  - term: PolicyEnforcementPoint
+    definition: The component (PEP) that enforces the PDP's decision in the data path.
+    related: [PolicyDecisionPoint]
+  - term: PolicyAdministrationPoint
+    definition: The component (PAP) where Zero Trust policy is authored and managed.
+    related: [PolicyDecisionPoint]
+  - term: Subject
+    definition: A user, service account, or workload identity that an access decision applies to.
+    related: [WorkloadIdentity]
+  - term: WorkloadIdentity
+    definition: A cryptographic identity for a workload, typically a SPIFFE SVID.
+    related: [SPIFFE]
+  - term: SPIFFE
+    definition: Secure Production Identity Framework for Everyone - CNCF-graduated standard for workload identity.
+    related: [SPIRE, WorkloadIdentity]
+  - term: SPIRE
+    definition: SPIFFE Runtime Environment - the reference implementation that issues SVIDs.
+    related: [SPIFFE]
+  - term: SVID
+    definition: SPIFFE Verifiable Identity Document - a short-lived X.509 or JWT credential issued to a workload.
+    related: [SPIFFE]
+  - term: OPA
+    definition: Open Policy Agent - CNCF-graduated general-purpose policy engine commonly used as a PDP.
+    related: [Rego, PolicyAsCode]
+  - term: Rego
+    definition: The declarative policy language used by OPA.
+    related: [OPA, PolicyAsCode]
+  - term: PolicyAsCode
+    definition: The practice of authoring access and security policies in version-controlled, machine-readable form.
+    related: [Rego, OPA]
+  - term: Pillar
+    definition: A category of Zero Trust capabilities in CISA ZTMM or DoD ZTRA.
+    related: [Capability, MaturityLevel]
+  - term: MaturityLevel
+    definition: One of CISA ZTMM v2's four levels - Traditional, Initial, Advanced, Optimal.
+    related: [Pillar]
+  - term: BeyondCorp
+    definition: Google's pioneering Zero Trust implementation; productized as BeyondCorp Enterprise.
+    related: [ZeroTrust]
+  - term: Microsegmentation
+    definition: Dividing networks and workloads into small enforcement zones to limit blast radius.
+    related: [AssumeBreach]
+  - term: ContinuousAuthorization
+    definition: Re-evaluating authorization throughout a session as conditions change.
+    related: [AccessDecision]
+  - term: Obligation
+    definition: A side-effect required of a PEP after a decision (e.g., require MFA, log, redact, isolate).
+    related: [AccessDecision, PolicyEnforcementPoint]
+  - term: Tenet
+    definition: One of the seven foundational Zero Trust tenets in NIST SP 800-207.
+    related: [ZTA]

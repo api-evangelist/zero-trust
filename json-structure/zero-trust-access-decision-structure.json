@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-structure.org/draft-00/schema",
+  "name": "ZeroTrustAccessDecisionStructure",
+  "type": "object",
+  "description": "Structural reference for a Zero Trust access decision.",
+  "properties": {
+    "request_id": { "type": "string" },
+    "evaluated_at": { "type": "string" },
+    "decision": { "type": "string", "enum": ["allow", "deny", "step_up", "isolate", "monitor"] },
+    "ttl_seconds": { "type": "integer" },
+    "subject": { "type": "object" },
+    "device": { "type": "object" },
+    "resource": { "type": "object" },
+    "context": { "type": "object" },
+    "signals": { "type": "array" },
+    "obligations": { "type": "array" }
+  }
+}

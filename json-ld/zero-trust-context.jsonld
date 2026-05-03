@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "zt": "https://api-evangelist.com/zero-trust/vocab#",
+    "AccessDecision": "zt:AccessDecision",
+    "Subject": "zt:Subject",
+    "Device": "zt:Device",
+    "Resource": "zt:Resource",
+    "Signal": "zt:Signal",
+    "Obligation": "zt:Obligation",
+    "Pdp": "zt:PolicyDecisionPoint",
+    "Pep": "zt:PolicyEnforcementPoint",
+    "Pap": "zt:PolicyAdministrationPoint",
+    "id": "@id",
+    "decision": "zt:decision",
+    "ttl_seconds": "zt:decisionTtl",
+    "evaluated_at": "schema:dateCreated",
+    "subject": "zt:subject",
+    "device": "zt:device",
+    "resource": "zt:resource",
+    "context": "zt:context",
+    "signals": "zt:signals",
+    "obligations": "zt:obligations",
+    "risk_score": "zt:riskScore",
+    "spiffe_id": "zt:spiffeId"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/zero-trust/main/json-schema/zero-trust-subject-schema.json",
+  "title": "Zero Trust Subject",
+  "description": "An identity subject (user, service account, or workload) referenced by Zero Trust policies.",
+  "type": "object",
+  "required": ["id", "type"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string", "enum": ["user", "service_account", "workload"] },
+    "identity_provider": { "type": "string" },
+    "spiffe_id": { "type": "string", "description": "SPIFFE ID of the workload, if applicable" },
+    "groups": { "type": "array", "items": { "type": "string" } },
+    "attributes": { "type": "object", "additionalProperties": true },
+    "created": { "type": "string", "format": "date-time" }
+  }
+}

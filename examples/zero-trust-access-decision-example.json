@@ -1,0 +1,40 @@
+{
+  "request_id": "9c1a2b3d-4e5f-4011-9876-1a2b3c4d5e6f",
+  "evaluated_at": "2026-05-03T12:14:09Z",
+  "decision": "step_up",
+  "ttl_seconds": 300,
+  "subject": {
+    "id": "alice@example.com",
+    "type": "user",
+    "identity_provider": "okta",
+    "groups": ["engineering", "incident-response"],
+    "mfa_method": "fido2"
+  },
+  "device": {
+    "id": "MBP-ABC-12345",
+    "managed": true,
+    "posture": "compliant",
+    "edr": "crowdstrike"
+  },
+  "resource": {
+    "id": "production-database-admin",
+    "type": "application",
+    "classification": "high"
+  },
+  "context": {
+    "geo": "US",
+    "ip": "203.0.113.42",
+    "risk_score": 62,
+    "client_app": "DBeaver/24.0"
+  },
+  "signals": [
+    { "name": "user_risk", "value": 35, "weight": 0.4 },
+    { "name": "device_risk", "value": 10, "weight": 0.2 },
+    { "name": "session_risk", "value": 80, "weight": 0.4 }
+  ],
+  "policy_id": "policy-prod-db-admin",
+  "obligations": [
+    { "type": "require_mfa", "params": { "factor": "fido2", "max_age_seconds": 60 } },
+    { "type": "log", "params": { "destination": "siem-prod" } }
+  ]
+}
