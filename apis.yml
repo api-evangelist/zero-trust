@@ -125,6 +125,10 @@ apis:
       - type: GitHubOrganization
         url: https://github.com/open-policy-agent
 common:
+  - type: VulnerabilityDisclosure
+    url: security/zero-trust-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/zero-trust-domain-security.yml
   - type: Documentation
     title: NIST Zero Trust Architecture
     url: https://www.nist.gov/publications/zero-trust-architecture
