@@ -1,5 +1,6 @@
 aid: zero-trust
 name: Zero Trust
+kind: topic
 description: >-
   Zero Trust is the umbrella cybersecurity strategy that eliminates implicit
   trust based on network location and requires continuous verification of
