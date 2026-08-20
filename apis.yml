@@ -104,7 +104,14 @@ apis:
       Cloud Apps, and Microsoft Intune together implement Zero Trust on the
       Microsoft platform; Microsoft Graph exposes a unified REST surface.
     humanURL: https://learn.microsoft.com/en-us/security/zero-trust/
-    tags: [Microsoft, Vendor, IdP]
+    tags:
+    - Microsoft
+    - Vendor
+    - IDP
+    tags_raw:
+    - Microsoft
+    - Vendor
+    - IdP
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/security/zero-trust/
@@ -122,7 +129,14 @@ apis:
     name: SPIFFE / SPIRE
     description: CNCF-graduated workload identity standard (SPIFFE) and reference runtime (SPIRE) used as the workload-identity foundation in Zero Trust deployments.
     humanURL: https://spiffe.io/
-    tags: [CNCF, Open Source, Workload Identity]
+    tags:
+    - CNCF
+    - Open-Source
+    - Workload Identity
+    tags_raw:
+    - CNCF
+    - Open Source
+    - Workload Identity
     properties:
       - type: Documentation
         url: https://spiffe.io/docs/latest/
@@ -132,7 +146,14 @@ apis:
     name: Open Policy Agent (OPA)
     description: CNCF-graduated general-purpose policy engine commonly deployed as the PDP in Zero Trust implementations.
     humanURL: https://www.openpolicyagent.org/
-    tags: [CNCF, Open Source, Policy Engine]
+    tags:
+    - CNCF
+    - Open-Source
+    - Policy Engine
+    tags_raw:
+    - CNCF
+    - Open Source
+    - Policy Engine
     properties:
       - type: Documentation
         url: https://www.openpolicyagent.org/docs/latest/
