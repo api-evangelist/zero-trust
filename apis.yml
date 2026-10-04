@@ -142,12 +142,13 @@ apis:
     humanURL: https://spiffe.io/
     tags:
     - CNCF
-    - Open-Source
+    - Open Source
     - Workload Identity
     tags_raw:
     - CNCF
     - Open Source
     - Workload Identity
+    - Open-Source
     properties:
       - type: Documentation
         url: https://spiffe.io/docs/latest/
@@ -159,12 +160,13 @@ apis:
     humanURL: https://www.openpolicyagent.org/
     tags:
     - CNCF
-    - Open-Source
+    - Open Source
     - Policy Engine
     tags_raw:
     - CNCF
     - Open Source
     - Policy Engine
+    - Open-Source
     properties:
       - type: Documentation
         url: https://www.openpolicyagent.org/docs/latest/
